@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bros Coffee</title>
+        <link rel="stylesheet" href="bros-coffee.css">
+        <!-- favicon -->
+        <link rel="icon" type="img/x-icon" href="img/bro-coffee-blk-logo.png">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    </head>
+    <body>
+<!--    nav bar start -->
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand">BROS COFFEE
+                    <img src="img/bro-coffee-blk-logo.png" alt="man holding a cup of coffee and smiling" height="36">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="bros-coffee.html" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Contact-Us.html">WHO'S THAT DEVELOPER?</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<!-- HERO SCENE-->
+        <img src="img/Bros-Coffee-Logo.png" alt="Man with coffee" class="Bro-logo">
+        <h1 class="text-center">BROS COFFEE</h1>
+<!-- GREY LINE -->
+        <hr class="mx-auto d-sm-none d-none d-md-block" style="width: 90%;">
+<!--    This section encloses everything -->
+        <section class="row">
+<!--        coffee cards -->
+            <table class="col-6 col-sm-6">
+                <tbody id="coffees" class="d-flex flex-wrap"></tbody>
+            </table>
+
+
+<!--    search and sort card-->
+            <div class="col-6 mt-5">
+                <form class="card border-0" class="card">
+                    <h3 class="subHeading">CHOOSE YOUR COFFEE</h3>
+                    <label for="roast-selection"><h4 class="mb-0 mt-2">ROAST</h4></label>
+                    <select id="roast-selection" class="mb-2 py-2">
+                        <option>All</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                    <label for="search-item"><h4 class="mb-0 mt-2">COFFEE NAME</h4></label>
+                    <input class="mb-2 py-2" autocomplete="off" type="text" name="" id="search-item" placeholder="Search products" onkeyup="search()">
+<!--                    <input type="text" autocomplete="off" id="filterInput" onfocus="this.value=''" value="Search for coffee">-->
+                    <input class="btn btn-primary my-4" id="submit" type="submit"/>
+                </form>
+                <hr>
+                <h3 class="subHeading"> ADD A COFFEE</h3>
+<!--            start of second search that add a coffee to the front of the array -->
+                <form class="card border-0" onsubmit="func()"> <!--onsubmit function help it not refresh -->
+                    <label for="roast-selection"><h4 class="mb-0 mt-2">ROAST</h4></label>
+                    <select id="roast-selection2" class="mb-2 py-2">
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                    <label for="search-item2"><h4 class="mb-0 mt-2">COFFEE NAME</h4></label>
+                    <input class="mb-2 py-2" type="text" autocomplete="off" name="" id="search-item2" placeholder="Search products">
+                    <input class="btn btn-primary my-4" autocomplete="off" id="submit2" onclick="addCoffee()" type="submit">
+                </form>
+                <div class="coffeeImg"></div>
+            </div>
+        </section>
+
+        <script src="bros-coffee.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>

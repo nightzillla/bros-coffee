@@ -1,0 +1,33 @@
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+h2{
+    padding-left: 3rem;
+}
+p{
+    padding-top:12px;
+    justify-content: center;
+}
+
+a {
+
+}
+.coffee{
+    width: 270px;
+    margin: 3rem 1rem;
+    border: none;
+}
+
+.idsOfCoffees{
+    display: none;
+}
+tbody  {
+
+}
